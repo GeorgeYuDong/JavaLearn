@@ -150,6 +150,7 @@ public class Hero extends Object {
         System.out.println("teemo的虚拟地址");
         teemo.showAddressInMemory();
         teemo.setId(123);
+        System.out.println("abc");
         System.out.println(teemo.id);
     }
 }
