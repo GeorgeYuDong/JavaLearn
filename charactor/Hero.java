@@ -26,6 +26,13 @@ public class Hero extends Object {
         System.out.println(copyright);
     }
 
+    //快捷键说明：
+    //ctrl+1,切换当前窗口和项目窗口，创建类快捷键alt+Insert
+    //alt+Insert：在文件窗口，可以快速创建set,get方法，构造方法等
+    //
+
+
+
     //类属性 static
     //类方法 static 不与具体对象相关,可以使用类方法，不需要依赖任何实例
 
@@ -105,6 +112,10 @@ public class Hero extends Object {
         i.effect();
     }
 
+    public void finalize(){
+        System.out.println("这个英雄正在被回收");
+    }
+
     public static void main(String[] args) {
         Hero garen = new Hero();
         garen.name = "盖伦";
@@ -150,8 +161,8 @@ public class Hero extends Object {
         System.out.println("teemo的虚拟地址");
         teemo.showAddressInMemory();
         teemo.setId(123);
-        System.out.println("abc");
-        System.out.println("cde");
         System.out.println(teemo.id);
+
+
     }
 }
