@@ -29,7 +29,7 @@ public class Hero extends Object {
     //快捷键说明：
     //ctrl+1,切换当前窗口和项目窗口，创建类快捷键alt+Insert
     //alt+Insert：在文件窗口，可以快速创建set,get方法，构造方法等
-    //
+    //alt+~,commit窗口，提交快捷键
 
 
 
