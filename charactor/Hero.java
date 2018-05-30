@@ -116,6 +116,15 @@ public class Hero extends Object {
         System.out.println("这个英雄正在被回收");
     }
 
+    public boolean equals(Object o){
+        if(o instanceof Hero){
+            Hero h = (Hero) o;
+            return this.hp == h.hp;
+        }
+        return false;
+    }
+
+
     public static void main(String[] args) {
         Hero garen = new Hero();
         garen.name = "盖伦";
@@ -147,11 +156,6 @@ public class Hero extends Object {
         System.out.println(garen.toString());
         System.out.println(garen);
 
-        //itar for循环快捷键
-        for (int i = 0; i < args.length; i++) {
-            String arg = args[i];
-
-        }
         Hero hero = new Hero("英雄");
         System.out.println(hero.name);
         Hero teemo = new Hero("提莫", 383);
@@ -162,6 +166,59 @@ public class Hero extends Object {
         teemo.showAddressInMemory();
         teemo.setId(123);
         System.out.println(teemo.id);
+
+        //只有一个引用
+        /*
+        Hero h;
+        for (int i = 0; i < 100000; i++) {
+            //不断生成新的对象
+            //每创建一个对象，前一个对象，就没有引用指向了
+            //那些对象，就满足垃圾回收的条件
+            //当，垃圾堆积的比较多的时候，就会触发垃圾回收
+            //一旦这个对象被回收，它的finalize()方法就会被调用
+            h = new Hero();
+        }
+        */
+
+        Hero h1 = new Hero();
+        h1.hp = 300;
+        //子类对象类型默认转换成父类引用类型
+        Hero h2 = new ADHero();
+        h2.hp = 400;
+        Hero h3 = new APHero();
+        h3.hp = 300;
+
+        System.out.println(h1.equals(h2));
+        System.out.println(h1.equals(h3));
+
+        ADHero ad = new ADHero();
+        APHero ap = new APHero();
+
+        h1 = ad;
+        h2 = ap;
+        System.out.println("instanceof 用法");
+        /*
+        System.out.println(h1 instanceof APHero);
+        System.out.println(h1 instanceof ADHero);
+        System.out.println(h2 instanceof ADHero);
+        System.out.println(h2 instanceof APHero);
+        System.out.println(h1 instanceof Hero);
+        System.out.println(h2 instanceof Hero);*/
+        System.out.println("tingzhi");
+
+        //instanceof,valueof这两种用法也要看一下
+
+        //对象转型
+        /*首先，明确引用类型与对象类型的概念
+        在这个例子里，有一个对象 new ADHero(), 同时也有一个引用ad
+        对象是有类型的， 是ADHero
+        引用也是有类型的，是ADHero
+        通常情况下，引用类型和对象类型是一样的*/
+        //到底能否转换成功? 教大家一个很简单的判别办法
+       // 把右边的当做左边来用，看说得通不
+        //所有的子类转换为父类，都是说得通的
+        //没有继承关系的两个类互相转换，一定会失败
+        //
 
 
     }
