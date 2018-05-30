@@ -151,7 +151,5 @@ public class Hero extends Object {
         teemo.showAddressInMemory();
         teemo.setId(123);
         System.out.println(teemo.id);
-        System.out.println("hello");
-
     }
 }
