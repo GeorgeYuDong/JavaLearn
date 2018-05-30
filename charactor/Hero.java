@@ -124,7 +124,6 @@ public class Hero extends Object {
         return false;
     }
 
-
     public static void main(String[] args) {
         Hero garen = new Hero();
         garen.name = "盖伦";
@@ -204,7 +203,20 @@ public class Hero extends Object {
         System.out.println(h2 instanceof APHero);
         System.out.println(h1 instanceof Hero);
         System.out.println(h2 instanceof Hero);*/
-        System.out.println("tingzhi");
+
+        //向上转换,ad转换成接口adi,ad中含有adi的实现，一定可以转换成功
+        AD adi = ad;
+
+
+        Hero h4 = new Hero();
+
+        ADHero add = new ADHero();
+
+        //物理攻击英雄是英雄，所以不需要强制转换,物理攻击英雄包含了英雄，是英雄的类型之一，所以可以指向物理攻击英雄对象
+        //普通英雄是物理攻击英雄吗，是物理攻击英雄类型吗，未必，所以必须强制转换
+        //这里=不是赋值,是指向,不要用赋值思想，要用两边类型是否一致的思想
+        add = (ADHero)h4;
+
 
         //instanceof,valueof这两种用法也要看一下
 
@@ -216,9 +228,15 @@ public class Hero extends Object {
         通常情况下，引用类型和对象类型是一样的*/
         //到底能否转换成功? 教大家一个很简单的判别办法
        // 把右边的当做左边来用，看说得通不
-        //所有的子类转换为父类，都是说得通的
+        //所有的子类转换为父类，都是说得通的,比如AD英雄是英雄，所以英雄引用可以指向AD英雄
         //没有继承关系的两个类互相转换，一定会失败
-        //
+        //实现类转换成接口（向上转换）是可行的
+
+        //final用法
+        //修饰类，不能被继承
+        //修饰方法，不能被重写
+        //修饰引用，引用只有一次指向对象的机会
+        //修饰static常量
 
 
     }
