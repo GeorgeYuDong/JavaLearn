@@ -12,6 +12,10 @@ public abstract class Herro {
     //有抽象方法，该类就必须声明为抽象类
     public abstract void gameWin();
 
+    public void chrisPaul(){
+
+    }
+
    /* 抽象类与接口的区别
     区别1：
     子类只能继承一个抽象类，不能继承多个
@@ -28,7 +32,7 @@ public abstract class Herro {
     即便没有显式的声明*/
     //注: 抽象类和接口都可以有实体方法。 接口中的实体方法，叫做默认方法
     public static void main(String[] args) {
-        Herro h;
+      //  Herro h;
         //抽象类不能直接被实例化
        // h = new Herro();
     }
