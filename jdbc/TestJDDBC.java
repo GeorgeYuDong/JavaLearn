@@ -11,8 +11,8 @@ public class TestJDDBC {
         Statement s = null;
         //初始化驱动
         try {
-            //驱动类com.mysql.jdbc.Driver
-            //就在 mysql-connector-java-5.0.8-bin.jar中
+            //驱动类com.mysql.cj.jdbc.Driver
+            //就在 mysql-connector-java-8.0.11-bin.jar中
             //如果忘记了第一个步骤的导包，就会抛出ClassNotFoundException
             Class.forName("com.mysql.cj.jdbc.Driver");
 
@@ -25,7 +25,7 @@ public class TestJDDBC {
             // 数据库名称 how2java
             // 编码方式 UTF-8
             // 账号 root
-            // 密码 admin
+            // 密码 mysql-8.0.11为yd4665071
 
             c = DriverManager.getConnection(
                             "jdbc:mysql://localhost:3306/how2java?characterEncoding=utf8&useSSL=false",

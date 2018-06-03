@@ -31,9 +31,11 @@ public abstract class Herro {
     final的
     即便没有显式的声明*/
     //注: 抽象类和接口都可以有实体方法。 接口中的实体方法，叫做默认方法
+
     public static void main(String[] args) {
       //  Herro h;
         //抽象类不能直接被实例化
        // h = new Herro();
     }
+    //String被设计为final是有原因的，因为String这个类使用得实在是太广泛了，如果能够被继承，就意味着其子类可以随意重写其非final的方法，这些方法就有可能变得和期望的不一样，比如toString始终返回空。 这样就给软件逻辑带来了很大的不确定性因素。
 }
