@@ -112,10 +112,13 @@ public class Hero extends Object {
         i.effect();
     }
 
+    //自Java9已不在被使用,过时了deprecated
+    @Override
     public void finalize(){
         System.out.println("这个英雄正在被回收");
     }
 
+    @Override
     public boolean equals(Object o){
         if(o instanceof Hero){
             Hero h = (Hero) o;
@@ -132,10 +135,11 @@ public class Hero extends Object {
         int assit;
 
         public void legendary() {
-            if (kill >= 8)
+            if (kill >= 8) {
                 System.out.println(name + "超神！");
-            else
+            } else {
                 System.out.println(name + "尚未超神！");
+            }
         }
     }
     //静态内部类
