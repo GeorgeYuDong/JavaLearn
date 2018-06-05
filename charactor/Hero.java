@@ -13,9 +13,12 @@ import property.MagicPotion;
 
 public class Hero extends Object {
     //血量
+
     private float hp;
     //伤害
-    private int damage;
+
+    public int damage;
+
     private int id;
 
     static String copyright;
@@ -52,16 +55,19 @@ public class Hero extends Object {
     //存在有参构造方法时，无参的构造方法,必须显式的声明
 
     //带一个参数的构造方法
+
     public void setId(int id){
         this.id = id;
     }
     //带一个参数的构造方法
+
     public Hero(String heroname){
         System.out.println("一个参数的构造方法");
         this.name = heroname;
     }
 
     //打印内存中的虚拟地址
+
     public void showAddressInMemory(){
         System.out.println("打印this看到的虚拟地址："+this);
     }
@@ -70,15 +76,19 @@ public class Hero extends Object {
     //引用是引用，对象是对象.分开的.就好像指针与指针所指向的对象的关系
 
     //带两个参数的构造方法
+
     public Hero(String heroname,float herohp){
+
         //调用一个参数的构造方法
        // this(heroname);
+
         this.name = heroname;
         System.out.println("两个参数的构造方法");
         this.hp = herohp;
     }
 
     //通过this访问属性
+
     public void setName(String name){
         //name代表的是参数name
         //this.name代表的是属性name
@@ -88,6 +98,7 @@ public class Hero extends Object {
     public String name = Hero.getName("属性声明") ;
 
     //最后才是构造方法中的初始化
+
     public Hero()
     {
         name = Hero.getName("构造方法");
@@ -104,6 +115,7 @@ public class Hero extends Object {
 
     //类方法，静态方法
     //通过类就可以直接调用
+
     public static void battleWin(){
         System.out.println("hero battle win");
     }
@@ -113,6 +125,7 @@ public class Hero extends Object {
     }
 
     //自Java9已不在被使用,过时了deprecated
+
     @Override
     public void finalize(){
         System.out.println("这个英雄正在被回收");
@@ -129,10 +142,10 @@ public class Hero extends Object {
 
     // 非静态内部类，只有一个外部类对象存在的时候，才有意义
     // 战斗成绩只有在一个英雄对象存在的时候才有意义
+
     class BattleScore {
+
         int kill;
-        int die;
-        int assit;
 
         public void legendary() {
             if (kill >= 8) {
@@ -143,17 +156,21 @@ public class Hero extends Object {
         }
     }
     //静态内部类
+
     /*在一个类里面声明一个静态内部类
     比如敌方水晶，当敌方水晶没有血的时候，己方所有英雄都取得胜利，而不只是某一个具体的英雄取得胜利。
     与非静态内部类不同，静态内部类水晶类的实例化 不需要一个外部类的实例为基础，可以直接实例化
     语法：new 外部类.静态内部类();
     因为没有一个外部类的实例，所以在静态内部类里面不可以访问外部类的实例属性和方法
     除了可以访问外部类的私有静态成员外，静态内部类和普通类没什么大的区别*/
+
     static class EnemyCrystal{
         int hp=5000;
 
         //如果水晶的血量为0，则宣布胜利
+
         public void checkIfVictory(){
+
             if(hp==5000){
                 Hero.battleWin();
 
@@ -164,6 +181,7 @@ public class Hero extends Object {
     }
 
     public static void main(String[] args) {
+
         Hero garen = new Hero();
         garen.name = "盖伦";
 
@@ -240,8 +258,10 @@ public class Hero extends Object {
         Hero h3 = new APHero();
         h3.hp = 300;
 
+        System.out.println("equals用法");
         System.out.println(h1.equals(h2));
         System.out.println(h1.equals(h3));
+        System.out.println(h1 == h3);
 
         ADHero ad = new ADHero();
         APHero ap = new APHero();
@@ -291,7 +311,7 @@ public class Hero extends Object {
         //修饰引用，引用只有一次指向对象的机会
         //修饰static常量
 
-
+        //接口与继承章节里面，最后一章是UML图，这个也要好好学，暂时不看
 
 
     }
