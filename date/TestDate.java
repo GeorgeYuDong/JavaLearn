@@ -1,4 +1,5 @@
 package date;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -30,6 +31,12 @@ public class TestDate {
         //理论上与getTime是一样的,当前日期的毫秒数
         System.out.println(System.currentTimeMillis());
 
+        //日期格式化
+        //SSS,代表毫秒
+        //日期格式化对象
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss SSS" );
+
+        System.out.println(sdf.format(d));
 
     }
 }
