@@ -31,11 +31,14 @@ public class TestDate {
         //理论上与getTime是一样的,当前日期的毫秒数
         System.out.println(System.currentTimeMillis());
 
+        System.out.println(d);
         //日期格式化
         //SSS,代表毫秒
         //日期格式化对象
+        //日期转字符串
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss SSS" );
 
+        //按照既定的日期格式化对象，调用format方法，入参date,返回toString
         System.out.println(sdf.format(d));
 
     }
