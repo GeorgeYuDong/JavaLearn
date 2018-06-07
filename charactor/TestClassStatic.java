@@ -42,5 +42,7 @@ public class TestClassStatic {
         System.out.println(Hero.copyright);
 
         System.out.println(44);
+
+
     }
 }
