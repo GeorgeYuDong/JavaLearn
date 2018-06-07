@@ -43,6 +43,11 @@ public class TestClassStatic {
 
         System.out.println(44);
 
+        //看原理，然后落实代码学习,奖励机制,用这个编译器写代码本身就是一种奖励
+        //jvm用C/C++编写，
+
+
+
 
     }
 }
