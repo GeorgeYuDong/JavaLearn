@@ -32,14 +32,14 @@ public class TestClassStatic {
         System.out.println(32);
 
         System.out.println(garen.name);
-        System.out.println(garen.copyright);
+        System.out.println(Hero.copyright);
 
         System.out.println(37);
 
         Hero teemo =  new Hero();
         teemo.name = "提莫";
         System.out.println(teemo.name);
-        System.out.println(teemo.copyright);
+        System.out.println(Hero.copyright);
 
         System.out.println(44);
     }
