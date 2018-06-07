@@ -30,5 +30,6 @@ public class TestMath {
         System.out.println((int)(random()*10));
 
 
+
     }
 }
