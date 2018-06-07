@@ -1,5 +1,7 @@
 package digit;
 
+import static java.lang.Math.*;
+
 /**
  * @Author:YuDong
  * @Description:
@@ -14,18 +16,18 @@ public class TestMath {
         //ctrl+shift+E,切换文件
 
         //在好的IDE下面编程就是一种奖励,心旷神怡,美哉
-        System.out.println(Math.abs(-1));
-        System.out.println(Math.round(12.56));
-        System.out.println("随机数: " + Math.random());
+        System.out.println(abs(-1));
+        System.out.println(round(12.56));
+        System.out.println("随机数: " + random());
 
-        System.out.println(Math.sqrt(25));
-        System.out.println(Math.E);
-        System.out.println(Math.PI);
+        System.out.println(sqrt(25));
+        System.out.println(E);
+        System.out.println(PI);
 
-        System.out.println("乘方:"+ Math.pow(2,4));
+        System.out.println("乘方:"+ pow(2,4));
 
         //取1-10之间的随机数,取不到10
-        System.out.println((int)(Math.random()*10));
+        System.out.println((int)(random()*10));
 
 
     }
