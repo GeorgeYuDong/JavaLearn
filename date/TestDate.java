@@ -41,5 +41,8 @@ public class TestDate {
         //按照既定的日期格式化对象，调用format方法，入参date,返回toString
         System.out.println(sdf.format(d));
 
+        //字符串格式化，string.format
+        //
+
     }
 }
