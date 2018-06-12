@@ -80,6 +80,9 @@ public class TestString {
         //不要忘记一点，面向对象编程是对数据和行为的封装
         //规定数据和方法的访问权限
         //
+        System.out.println("cont");
+        //str3本身没有变化
+        System.out.println(str3);
         System.out.println(str3.concat("abc"));
 
         System.out.println(str3.lastIndexOf("了"));
@@ -120,6 +123,12 @@ public class TestString {
         System.out.println(str5);
         //比较内容，忽略大小写
         System.out.println(str1.equalsIgnoreCase(str5));
+
+        System.out.println("是否以子字符串开始或结束");
+        String start = "the";
+        String end = "Ight";
+        System.out.println(str1.startsWith(start));
+        System.out.println(str1.endsWith(end));
 
 
 
