@@ -66,6 +66,60 @@ public class TestString {
             System.out.println(sub);
         }
 
+        //截取字符串,左开右闭
+        String str3 = "halo,worlod, 123,水电费了的";
+        System.out.println(str3.substring(4));
+        System.out.println(str3.substring(4,10));
+
+        //转换大小写，toLower,toUpper
+        System.out.println(str3.toLowerCase());
+        System.out.println(str3.toUpperCase());
+
+        //返回d第一个字符出现的下标
+        System.out.println(str3.indexOf('d'));
+        //不要忘记一点，面向对象编程是对数据和行为的封装
+        //规定数据和方法的访问权限
+        //
+        System.out.println(str3.concat("abc"));
+
+        System.out.println(str3.lastIndexOf("了"));
+
+        //是否包含子串
+        System.out.println(str3.contains("123"));
+
+        //从位置1开始，第一次出现,的下标
+        System.out.println(str3.indexOf(',',1));
+
+        //替换所有子串,本身str3是没有变化的
+        System.out.println(str3.replaceAll("lo", "iii"));
+
+        System.out.println(str3);
+
+        System.out.println(str3.replaceFirst("o","lo"));
+
+        //原串没有变化
+        System.out.println(str3);
+        System.out.println(str3.replaceFirst("lo","d"));
+
+
+        String str1 = "the light";
+        String str2 = new String(str1);
+
+        //两个对象不同
+        System.out.println(str1 == str2);
+
+        //两个对象的内容是一样的
+        System.out.println(str1.equals(str2));
+
+        String str4 = "the light";
+        //字面值一样，编译器不再重复创建对象
+        System.out.println(str1 == str4);
+
+        //str5为大写
+        String str5  = str1.toUpperCase();
+        System.out.println(str5);
+        //比较内容，忽略大小写
+        System.out.println(str1.equalsIgnoreCase(str5));
 
 
 
