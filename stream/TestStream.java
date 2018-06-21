@@ -15,6 +15,8 @@ import java.io.IOException;
 public class TestStream {
     //输入输出流是针对内存本身来说的
 
+    //难在OOD,面向对象的设计
+
     public static void main(String[] args) {
         try {
             File f = new File("d:/lol.txt");
@@ -38,6 +40,8 @@ public class TestStream {
             // TODO Auto-generated catch block
             ee.printStackTrace();
         }
+        //知道有哪些内容，然后编程工具有提示，自己做
+
 
 
     }
