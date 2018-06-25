@@ -17,7 +17,7 @@ public class TestCharacterStream {
         // 准备文件lol2.txt
         File f = new File("d:/lol2.txt");
 
-        // 创建基于文件的Writer
+        // 创建基于文件的Writer,而非FileOutPutStream
         try (FileWriter fr = new FileWriter(f)) {
             // 以字符流的形式把数据写入到文件中
             String data="1234567890";

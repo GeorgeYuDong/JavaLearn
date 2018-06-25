@@ -4,6 +4,8 @@ import property.Item;
 import property.LifePotion;
 import property.MagicPotion;
 
+import java.io.Serializable;
+
 /**
  * @Author:YuDong
  * @Description:
@@ -11,10 +13,15 @@ import property.MagicPotion;
  * @Modified By:
  */
 
-public class Hero extends Object {
+public class Hero extends Object implements Serializable{
+
+    //表示这个类当前的版本，如果有了变化，比如新设计了属性，就应该修改这个版本号
+
+    private static final long serialVersionUID = 1L;
+
     //血量
 
-    private float hp;
+    public float hp;
     //伤害
 
     public int damage;
@@ -130,7 +137,7 @@ public class Hero extends Object {
     public void finalize(){
         System.out.println("这个英雄正在被回收");
     }
-
+/*
     @Override
     public boolean equals(Object o){
         if(o instanceof Hero){
@@ -139,6 +146,7 @@ public class Hero extends Object {
         }
         return false;
     }
+    */
 
     // 非静态内部类，只有一个外部类对象存在的时候，才有意义
     // 战斗成绩只有在一个英雄对象存在的时候才有意义
@@ -178,6 +186,11 @@ public class Hero extends Object {
              //   System.out.println(name + " win this game");
             }
         }
+    }
+
+    @Override
+    public String toString(){
+       return this.name;
     }
 
     public static void main(String[] args) {

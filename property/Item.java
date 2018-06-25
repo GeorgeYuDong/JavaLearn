@@ -12,6 +12,12 @@ public class Item {
     String name;
     int price;
 
+    public Item() {
+    }
+    public Item(String name) {
+        this.name = name;
+    }
+
     public void buy(){
         System.out.println("购买");
     }
