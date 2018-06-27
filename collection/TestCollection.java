@@ -4,9 +4,7 @@ import charactor.APHero;
 import charactor.Hero;
 import property.Item;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 /**
  * @Author:YuDong
@@ -77,10 +75,50 @@ public class TestCollection {
             System.out.println(o);
         }
 
+       // Collections是一个类，容器的工具类,就如同Arrays是数组的工具类
 
+        //Collection是 Set List Queue和 Deque的接口
+        //Queue: 先进先出队列
+        //Deque: 双向链表
+        //Queue继承了Collection
 
+       // 注：Collection和Map之间没有关系，Collection是放一个一个对象的，Map 是放键值对的
+       // 注：Deque 继承 Queue,间接得继承了 Collection
 
+        //初始化集合numbers
+        List<Integer> numbers = new ArrayList<>();
 
+        for (int i = 0; i < 10; i++) {
+            numbers.add(i);
+        }
+
+        System.out.println("集合中的数据:");
+        System.out.println(numbers);
+
+        Collections.reverse(numbers);
+
+        System.out.println("翻转后集合中的数据:");
+        System.out.println(numbers);
+
+        Collections.shuffle(numbers);
+
+        System.out.println("混淆后集合中的数据:");
+        System.out.println(numbers);
+
+        Collections.sort(numbers);
+        System.out.println("排序后集合中的数据:");
+        System.out.println(numbers);
+
+        Collections.swap(numbers,0,5);
+        System.out.println("交换0和5下标的数据后，集合中的数据:");
+        System.out.println(numbers);
+
+        Collections.rotate(numbers,2);
+        System.out.println("把集合向右滚动2个单位，标的数据后，集合中的数据:");
+        System.out.println(numbers);
+
+        System.out.println("把非线程安全的List转换为线程安全的List");
+        List<Integer> synchronizedNumbers = Collections.synchronizedList(numbers);
         }
             
 

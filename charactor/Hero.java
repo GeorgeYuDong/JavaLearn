@@ -13,7 +13,7 @@ import java.io.Serializable;
  * @Modified By:
  */
 
-public class Hero extends Object implements Serializable{
+public class Hero extends Object implements Serializable,Comparable<Hero>{
 
     //表示这个类当前的版本，如果有了变化，比如新设计了属性，就应该修改这个版本号
 
@@ -102,6 +102,21 @@ public class Hero extends Object implements Serializable{
         this.name = name;
     }
 
+    @Override
+    public int compareTo(Hero anotherHero) {
+        if(damage > anotherHero.damage) {
+            return 1;
+        } else {
+            return -1;
+        }
+    }
+
+    public Hero(String name, int hp, int damage) {
+        this.name = name;
+        this.hp = hp;
+        this.damage = damage;
+    }
+
     public String name = Hero.getName("属性声明") ;
 
     //最后才是构造方法中的初始化
@@ -136,6 +151,10 @@ public class Hero extends Object implements Serializable{
     @Override
     public void finalize(){
         System.out.println("这个英雄正在被回收");
+    }
+
+    public String getName() {
+        return this.name;
     }
 /*
     @Override
@@ -190,7 +209,8 @@ public class Hero extends Object implements Serializable{
 
     @Override
     public String toString(){
-       return this.name;
+   //    return this.name;
+        return "Hero [name=" + name + ", hp=" + hp + ", damage=" + damage + "]\r\n";
     }
 
     public static void main(String[] args) {
