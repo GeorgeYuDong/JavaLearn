@@ -18,6 +18,7 @@ public class Battle implements Runnable {
         this.h2 = h2;
     }
 
+
     @Override
     public void run(){
         while(!h2.isDead()){

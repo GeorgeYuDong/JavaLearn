@@ -71,13 +71,14 @@ public class TestJDBC {
                     e.printStackTrace();
                 }
             // 后关闭Connection
-            if (c != null)
+            if (c != null) {
                 try {
                     c.close();
                 } catch (SQLException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
+            }
 
         }
     }
