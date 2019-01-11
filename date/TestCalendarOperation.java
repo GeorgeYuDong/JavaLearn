@@ -40,7 +40,7 @@ public class TestCalendarOperation {
         c.add(Calendar.MONTH, -1);
         c.set(Calendar.DATE, 3);
         System.out.println("上个月的第三天:\t" +format(c.getTime()));
-
+        System.out.println("hello,world");
     }
 
     private static String format(Date time) {
