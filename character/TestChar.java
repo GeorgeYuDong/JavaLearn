@@ -1,5 +1,7 @@
 package character;
 
+import java.lang.reflect.Array;
+
 /**
  * @Author:YuDong
  * @Description:
@@ -35,14 +37,14 @@ public class TestChar {
 
 
         //数组创建,不用new，直接初始化
-        int[] b = {1,2,3};
-        for (int each: b
-             ) {
+        int[] b = {1, 2, 3};
+        for (int each : b
+                ) {
             System.out.println(each);
         }
 
         //数组创建，new int后面如果初始化，指定具体内容，就不设置具体长度
-        int[] a = new int[]{11,22,33,44};
+        int[] a = new int[]{11, 22, 33, 44};
         System.out.println(a.length);
 
         //分配长度是5的数组，但不初始化
@@ -60,9 +62,25 @@ public class TestChar {
 
         System.out.println(Character.valueOf(c));
 
+        System.out.println(true);
 
+        System.out.println(Integer.SIZE);
+        System.out.println(Boolean.compare(false, true));
 
+        System.out.println(Boolean.TRUE);
+        System.out.println(Boolean.FALSE);
+        System.out.println(Boolean.valueOf("true"));
+        System.out.println(Byte.SIZE);
+        System.out.println(Short.SIZE);
+        int LENGTH = 3;
+        int[] arr = new int[LENGTH];
+        System.out.println(arr[1]);
+        System.out.println(arr.length);
 
+        String s = "(client_age > 40 AND total_asset > 500)";
+        if (s.contains("AND") || s.contains("OR")){
+
+        }
 
     }
-}
+ }
