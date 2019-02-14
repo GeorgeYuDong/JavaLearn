@@ -85,6 +85,5 @@ public class TestGenericHero {
       //  如果希望只插入，不取出，就使用? super Hero
       //  如果希望，又能插入，又能取出，就不要用通配符？
         //泛型引用不能做子类和父类之间的转型
-
     }
 }

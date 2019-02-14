@@ -1,6 +1,7 @@
 package generic;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class DynamicArray<E> {
     //默认的容量为10个元素
@@ -14,6 +15,7 @@ public class DynamicArray<E> {
     }
 
     private void ensureCapacity(int minCapacity) {
+
         int oldCapacity = elementData.length;
         if(oldCapacity>=minCapacity){
             return;
@@ -42,4 +44,18 @@ public class DynamicArray<E> {
         elementData[index] = element;
         return oldValue;
     }
+
+    public static void main(String[] args){
+        DynamicArray<Double> arr = new DynamicArray<Double>();
+        Random rnd = new Random();
+        int size = 1+rnd.nextInt(100);
+        for(int i=0; i<size; i++){
+            arr.add(Math.random());
+        }
+        Double d = arr.get(rnd.nextInt(size));
+        System.out.println(d);
+    }
+
+
+
 }    

@@ -19,12 +19,12 @@ public class TestSet {
         HashSet<Integer> numberSet1 = new HashSet<>();
         //HashSet中的数据不是按照插入顺序存放
         numberSet1.add(88);
-        numberSet1.add(8);
+        numberSet1.add(88);
         numberSet1.add(888);
 
         System.out.println("HashSet中的数据");
         System.out.println(numberSet1);
-
+        /*
         LinkedHashSet<Integer> numberSet2 = new LinkedHashSet<>();
         //LinkedHashSet中的数据是按照插入顺序存放
         numberSet2.add(88);
@@ -49,7 +49,9 @@ public class TestSet {
             heroMap.put(h.name, h);
         }
         System.out.println("数据准备完成");
+        */
 
+        /*
         for (int i = 0; i < 10; i++) {
             long start = System.currentTimeMillis();
 
@@ -61,6 +63,7 @@ public class TestSet {
             long elapsed = end - start;
             System.out.println("一共花了：" + elapsed + " 毫秒");
         }
+        */
 
     }
 }
