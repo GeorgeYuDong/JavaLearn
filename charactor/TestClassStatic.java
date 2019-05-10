@@ -1,5 +1,10 @@
 package charactor;
 
+import java.nio.charset.Charset;
+import java.util.Arrays;
+import java.util.Locale;
+import java.util.TimeZone;
+
 /**
  * @Author:YuDong
  * @Description:
@@ -43,6 +48,10 @@ public class TestClassStatic {
 
         System.out.println(44);
 
+        System.out.println(Charset.defaultCharset().name());
+
+
+
 
 
         //看原理，然后落实代码学习,奖励机制,用这个编译器写代码本身就是一种奖励
@@ -64,5 +73,19 @@ public class TestClassStatic {
         //java.sql:数据库API
         //java.awt,java.swing:GUI设计与开发的类
 
+        int[] arr = new int[]{1,2,3,4};
+        /**
+         *
+         * src是原串复制的开始位置，destPos是目的串开始的位置
+         */
+        System.arraycopy(arr,0,arr,1,3);
+        System.out.println(arr[1]+","+arr[2]+","+arr[3]);
+
+        TimeZone tz = TimeZone.getDefault();
+        System.out.println(tz.getID());
+        System.out.println(System.getProperty("user.timezone"));
+        System.out.println(Locale.getDefault().toString());
+
+        Arrays.
     }
 }
